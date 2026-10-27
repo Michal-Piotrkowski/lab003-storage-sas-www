@@ -3,4 +3,5 @@ data "azurerm_resource_group" "basic" {
   name = local.rg.basic
 }
 
-# TODO: Dodaj data source client_config dla RBAC (krok 2)
+# Tożsamość zalogowana w az login (object_id dla przypisań RBAC)
+data "azurerm_client_config" "current" {}

@@ -1,5 +1,4 @@
 # Storage Account na pliki udostępniane przez SAS -- bez publicznego dostępu
-# Storage Account na pliki udostępniane przez SAS -- bez publicznego dostępu
 resource "azurerm_storage_account" "files" {
   name                     = local.names.st # stfiles26<student_id>
   resource_group_name      = data.azurerm_resource_group.basic.name

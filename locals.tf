@@ -10,7 +10,25 @@ locals {
     project = var.project
   })
 
-  # TODO: Dodaj local shared_files (pliki do udostępnienia, krok 1)
+  shared_files = {
+    "document1.pdf"     = "./files/document1.pdf"
+    "presentation.pptx" = "./files/presentation.pptx"
+    "data.csv"          = "./files/data.csv"
+  }
 
-  # TODO: Dodaj local content_types (typy MIME wg rozszerzenia, krok 1)
+  # Typy MIME wg rozszerzenia pliku (pliki SAS i strona WWW)
+  content_types = {
+    "pdf"  = "application/pdf"
+    "pptx" = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    "csv"  = "text/csv"
+    "html" = "text/html"
+    "css"  = "text/css"
+    "js"   = "application/javascript"
+    "json" = "application/json"
+    "txt"  = "text/plain"
+    "png"  = "image/png"
+    "jpg"  = "image/jpeg"
+    "svg"  = "image/svg+xml"
+    "ico"  = "image/x-icon"
+  }
 }
